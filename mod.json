@@ -1,0 +1,40 @@
+{
+	"geode": "5.8.1",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081"
+	},
+	"version": "v1.0.0",
+	"id": "yourname.precise-inputs",
+	"name": "Precise Inputs",
+	"developer": "YourName",
+	"description": "Buffers a click by 1-3 ticks and only registers it once it is safe.",
+	"settings": {
+		"active": {
+			"type": "bool",
+			"name": "Enabled",
+			"description": "Turn Precise Inputs on or off. Also available in the pause menu.",
+			"default": true
+		},
+		"buffer-ticks": {
+			"type": "int",
+			"name": "Buffer window (ticks)",
+			"description": "A click is delayed by at most this many ticks to reach a safe moment. If no safe moment exists inside the window, the click registers instantly (no delay).",
+			"default": 3,
+			"min": 1,
+			"max": 3,
+			"control": {
+				"slider": true,
+				"arrows": true,
+				"input": false
+			}
+		},
+		"toggle-key": {
+			"type": "keybind",
+			"name": "Toggle key",
+			"description": "Press to turn Precise Inputs on or off.",
+			"default": "F6"
+		}
+	}
+}
